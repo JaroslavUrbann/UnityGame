@@ -61,14 +61,34 @@ public class TowerMenus : MonoBehaviour {
 		}
 	}
 
-	public void ChooseTower(float fireRate, float speed, float damage){
+	public void ChooseTower(string towerName){
 		ToggleMenu();
 		TowerRange.radius = RangeObject.transform.localScale[0] / 2;
 		RangeObject.SetActive(false);
 		isBuilt = true;
-		projectileFireRate = fireRate;
-		projectileSpeed = speed;
-		projectileDamage = damage;
+        switch (towerName)
+        {
+            case "Archery":
+                projectileFireRate = 0.5f;
+                projectileSpeed = 1000f;
+                projectileDamage = 50f;
+                break;
+            case "Canon":
+                projectileFireRate = 0.5f;
+                projectileSpeed = 1000f;
+                projectileDamage = 50f;
+                break;
+            case "Trebuchet":
+                projectileFireRate = 0.5f;
+                projectileSpeed = 1000f;
+                projectileDamage = 50f;
+                break;
+            case "Wizard":
+                projectileFireRate = 0.5f;
+                projectileSpeed = 1000f;
+                projectileDamage = 50f;
+                break;
+        }
 	}
 
 	public void OnMouseEnter() { 
