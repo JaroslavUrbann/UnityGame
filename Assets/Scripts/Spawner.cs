@@ -2,57 +2,102 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System.Timers;
+using System.IO;
 
 public class Spawner : MonoBehaviour {
 
 	public Enemy Enemy;
-	private int waves = 8;
-	private int currentWave = 0;
+
+	private float wavesLeft;
+    private float batchesLeft;
+
 	private float waveRate;
 	private float batchRate; // time difference between batch end and another batch start
 	private float nextBatchStart;
     private float batchLength;
     private float nextSpawn;
     private float spawnRate;
-    private bool round;
-    private bool batch;
+
+    private float enemySpeed;
+    private float enemyHealth;
+    private float enemySize;
+    private float enemySprite;
+
+    private bool roundStarted;
+    private bool spawnEnemies;
+
+    private StreamReader csvReader;
+    private Queue<float[]> wavesList;
 
     public void OnClick()
     {
-        round = true;
+        roundStarted = true;
+        nextBatchStart = Time.time;
+    }
+
+    void loadWaves(){
+        string csvPath = System.IO.Path.GetFullPath("WaveDatabase.csv");
+        csvReader = new StreamReader(csvPath);
+        wavesList = new Queue<float[]>();
+        wavesLeft = System.Array.ConvertAll<string, float>(csvReader.ReadLine().Split(','), float.Parse)[0];
+        wavesLeft--;
+        batchesLeft = System.Array.ConvertAll<string, float>(csvReader.ReadLine().Split(','), float.Parse)[0];;
+        while(!csvReader.EndOfStream){
+            float[] Line = System.Array.ConvertAll<string, float>(csvReader.ReadLine().Split(','), float.Parse);
+            wavesList.Enqueue(Line);
+        }
     }
 	
 	// Use this for initialization
 	void Start () {
-        round = false;
-        batch = false;
-        batchRate = 5f;
-        batchLength = 5f;
-        spawnRate = 1f;
-        nextSpawn = Time.time;
-        nextBatchStart = Time.time + batchRate;
+        loadWaves();
+        roundStarted = false;
+        spawnEnemies = false;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-        BatchManager();
-        Batches();
-        Enemies();
+        if(roundStarted){
+            ReadWaves();
+        }
+        if(roundStarted){
+            Batches();
+            Enemies();
+        }
 	}
 
-	void BatchManager()
+	void ReadWaves()
     {
-        // read from file and after each nextbatchstart set batchrate, batchlength, spawnrate...
+        if(!spawnEnemies && Time.time > nextBatchStart){
+            if(batchesLeft == 0){
+                Debug.Log("the wave ended");
+                if(wavesLeft == 0){
+                    Debug.Log("dude it all ended");
+                    roundStarted = false;
+                    return;
+                }
+                batchesLeft = wavesList.Dequeue()[0];
+                wavesLeft--;
+            }
+            Debug.Log("The batch started");
+            float[] batchInfo = wavesList.Dequeue();
+            batchLength = batchInfo[0];
+            batchRate = batchInfo[1];
+            spawnRate = batchLength / batchInfo[2];
+            enemySpeed = batchInfo[3];
+            enemyHealth = batchInfo[4];
+            batchesLeft--;
+        }        
     }
 
     void Batches()
     {
-        batch = false;
-        if (Time.time > nextBatchStart && round)
+        spawnEnemies = false;
+        if (Time.time > nextBatchStart)
         {
-            if(nextBatchStart + batchLength > Time.time)
+            if(Time.time < nextBatchStart + batchLength)
             {
-                batch = true;
+                spawnEnemies = true;
             }
             else
             {
@@ -63,16 +108,16 @@ public class Spawner : MonoBehaviour {
 
     void Enemies()
     {
-        if(batch && Time.time > nextSpawn)
+        if(spawnEnemies && Time.time > nextSpawn)
         {
-            SpawnEnemy(2f, 50f);
+            SpawnEnemy();
             nextSpawn = Time.time + spawnRate;
         }
     }
 
-	void SpawnEnemy(float speed, float health){
+	void SpawnEnemy(){
 		Enemy EnemyInstance = Instantiate (Enemy, transform.position, Quaternion.identity) as Enemy;
-		EnemyInstance.Speed = speed;
-        EnemyInstance.Health = health;
+		EnemyInstance.Speed = enemySpeed;
+        EnemyInstance.Health = enemyHealth;
 	}
 }
