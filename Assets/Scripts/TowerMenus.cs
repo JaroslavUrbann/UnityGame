@@ -70,23 +70,23 @@ public class TowerMenus : MonoBehaviour {
         {
             case "Archery":
                 projectileFireRate = 0.5f;
-                projectileSpeed = 1000f;
-                projectileDamage = 50f;
+                projectileSpeed = 20f;
+                projectileDamage = 10f;
                 break;
             case "Canon":
                 projectileFireRate = 0.5f;
-                projectileSpeed = 1000f;
-                projectileDamage = 50f;
+                projectileSpeed = 20f;
+                projectileDamage = 10f;
                 break;
             case "Trebuchet":
                 projectileFireRate = 0.5f;
-                projectileSpeed = 1000f;
-                projectileDamage = 50f;
+                projectileSpeed = 20f;
+                projectileDamage = 10f;
                 break;
             case "Wizard":
                 projectileFireRate = 0.5f;
-                projectileSpeed = 1000f;
-                projectileDamage = 50f;
+                projectileSpeed = 20f;
+                projectileDamage = 10f;
                 break;
         }
 	}

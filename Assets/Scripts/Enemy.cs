@@ -6,20 +6,19 @@ public class Enemy : MonoBehaviour {
 
 	public float Speed;
 	public float Health;
-	public float Size;
+    public Transform[] Waypoints;
 	public float pathOffset = 0.5f;
 	private float speedOffset = 0.2f;
-	public SpriteRenderer Sprite;
-    public Transform[] Waypoints;
 	private int waypointIndex = 0;
 	private Vector3[] waypoints;
 
 	void Start () {
-		waypoints = new Vector3[Waypoints.Length + 1];
+		waypoints = new Vector3[Waypoints.Length];
 		waypoints[waypointIndex] = new Vector3(Waypoints[waypointIndex].transform.position[0] + Random.Range(-pathOffset, pathOffset),
 											Waypoints[waypointIndex].transform.position[1] + Random.Range(-pathOffset, pathOffset),
 											Waypoints[waypointIndex].transform.position[2]);
 		Speed = Speed + Random.Range(-speedOffset, speedOffset);
+		transform.position = waypoints[waypointIndex];
 	}
 	
 	void Update () {
@@ -37,15 +36,17 @@ public class Enemy : MonoBehaviour {
     {
         if (waypointIndex < Waypoints.Length)
         {
-            transform.position = Vector2.MoveTowards(transform.position,
-               waypoints[waypointIndex],
-               Speed * Time.deltaTime);
+			transform.position = Vector2.MoveTowards(transform.position,
+			waypoints[waypointIndex],
+			Speed * Time.deltaTime);
             if (transform.position == waypoints[waypointIndex])
             {
-				waypointIndex += 1;
-				waypoints[waypointIndex] = new Vector3(Waypoints[waypointIndex].transform.position[0] + Random.Range(-pathOffset, pathOffset),
-													Waypoints[waypointIndex].transform.position[1] + Random.Range(-pathOffset, pathOffset),
-													Waypoints[waypointIndex].transform.position[2]);
+				waypointIndex++;
+				if(waypointIndex < Waypoints.Length){
+					waypoints[waypointIndex] = new Vector3(Waypoints[waypointIndex].transform.position[0] + Random.Range(-pathOffset, pathOffset),
+									Waypoints[waypointIndex].transform.position[1] + Random.Range(-pathOffset, pathOffset),
+									Waypoints[waypointIndex].transform.position[2]);
+				}
             }
         }
 		else{

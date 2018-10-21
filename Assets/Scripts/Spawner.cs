@@ -6,7 +6,7 @@ using System.IO;
 
 public class Spawner : MonoBehaviour {
 
-	public Enemy Enemy;
+	public Enemy[] Enemy;
 
 	private float wavesLeft;
     private float batchesLeft;
@@ -18,10 +18,8 @@ public class Spawner : MonoBehaviour {
     private float nextSpawn;
     private float spawnRate;
 
-    private float enemySpeed;
-    private float enemyHealth;
-    private float enemySize;
-    private float enemySprite;
+    private int enemyType;
+    private float enemyHealthMultiplier;
 
     private bool roundStarted;
     private bool spawnEnemies;
@@ -81,11 +79,11 @@ public class Spawner : MonoBehaviour {
             }
             Debug.Log("The batch started");
             float[] batchInfo = wavesList.Dequeue();
-            batchLength = batchInfo[0];
-            batchRate = batchInfo[1];
-            spawnRate = batchLength / batchInfo[2];
-            enemySpeed = batchInfo[3];
-            enemyHealth = batchInfo[4];
+            batchLength = batchInfo[0]; // batch length
+            batchRate = batchInfo[1];   // batch down time
+            spawnRate = batchLength / batchInfo[2]; // number of enemies sets spawnrate
+            enemyHealthMultiplier = batchInfo[3];  // enemy health multiplier
+            enemyType = (int)batchInfo[4];   // enemy type index
             batchesLeft--;
         }        
     }
@@ -116,8 +114,7 @@ public class Spawner : MonoBehaviour {
     }
 
 	void SpawnEnemy(){
-		Enemy EnemyInstance = Instantiate (Enemy, transform.position, Quaternion.identity) as Enemy;
-		EnemyInstance.Speed = enemySpeed;
-        EnemyInstance.Health = enemyHealth;
+		Enemy EnemyInstance = Instantiate (Enemy[enemyType], transform.position, Quaternion.identity) as Enemy;
+        EnemyInstance.Health = EnemyInstance.Health * enemyHealthMultiplier;
 	}
 }
