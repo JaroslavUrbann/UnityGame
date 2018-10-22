@@ -645,7 +645,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Enemy:
+  - {fileID: 114878984274563238, guid: c1a294c8d803bc946a21712127e12e27, type: 2}
+  - {fileID: 114137861078684924, guid: 60d026499813fd147a697242bfeb5eff, type: 2}
   - {fileID: 114463858022698688, guid: 289b5bb8555a7b340bd9128566e8aa7f, type: 2}
+  - {fileID: 114959486398732500, guid: 13eec297d2f47904eb65d420c3279550, type: 2}
+  - {fileID: 114393398524751976, guid: 20f5b2320453bf64d8cad5f27b590b2f, type: 2}
+  - {fileID: 114897932639696700, guid: 4486fbe08834bca4ab0bee199b81bfdc, type: 2}
+  - {fileID: 114877695291673206, guid: b6a349524aa0842478c5877e35a9505d, type: 2}
+  - {fileID: 114871663538300240, guid: 71d8259203a96d742bdbb001086394c7, type: 2}
+  - {fileID: 114358778616520360, guid: fafbaf2f4a9f5174fa8d2713c9d1b3bd, type: 2}
+  - {fileID: 114868220580362888, guid: e4cff369a56408f4d8b3f576fe49d9e5, type: 2}
 --- !u!4 &1352550485
 Transform:
   m_ObjectHideFlags: 0
