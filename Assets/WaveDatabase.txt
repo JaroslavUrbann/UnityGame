@@ -1,0 +1,4 @@
+1
+1
+2 1 1 2 50 20 0
+batch length | batch down time | enemy spawn frequency | enemy speed | enemy health | enemy size | enemy waypointOffset
