@@ -6,17 +6,18 @@ public class Enemy : MonoBehaviour {
 
 	public float Speed;
 	public float Health;
-    public Transform[] Waypoints;
-	public float pathOffset = 0.5f;
+    public Transform[] Waypoints4;
+	public Transform[] Waypoints1;
+	public float pathOffset = 0.1f;
 	private float speedOffset = 0.2f;
 	private int waypointIndex = 0;
 	private Vector3[] waypoints;
 
 	void Start () {
-		waypoints = new Vector3[Waypoints.Length];
-		waypoints[waypointIndex] = new Vector3(Waypoints[waypointIndex].transform.position[0] + Random.Range(-pathOffset, pathOffset),
-											Waypoints[waypointIndex].transform.position[1] + Random.Range(-pathOffset, pathOffset),
-											Waypoints[waypointIndex].transform.position[2]);
+		waypoints = new Vector3[Waypoints1.Length];
+		waypoints[waypointIndex] = new Vector3(Waypoints1[waypointIndex].transform.position[0] + Random.Range(-pathOffset, pathOffset),
+											Waypoints1[waypointIndex].transform.position[1] + Random.Range(-pathOffset, pathOffset),
+											Waypoints1[waypointIndex].transform.position[2]);
 		Speed = Speed + Random.Range(-speedOffset, speedOffset);
 		transform.position = waypoints[waypointIndex];
 	}
@@ -34,7 +35,7 @@ public class Enemy : MonoBehaviour {
 
 	private void FollowWaypoints()
     {
-        if (waypointIndex < Waypoints.Length)
+        if (waypointIndex < Waypoints1.Length)
         {
 			transform.position = Vector2.MoveTowards(transform.position,
 			waypoints[waypointIndex],
@@ -42,10 +43,10 @@ public class Enemy : MonoBehaviour {
             if (transform.position == waypoints[waypointIndex])
             {
 				waypointIndex++;
-				if(waypointIndex < Waypoints.Length){
-					waypoints[waypointIndex] = new Vector3(Waypoints[waypointIndex].transform.position[0] + Random.Range(-pathOffset, pathOffset),
-									Waypoints[waypointIndex].transform.position[1] + Random.Range(-pathOffset, pathOffset),
-									Waypoints[waypointIndex].transform.position[2]);
+				if(waypointIndex < Waypoints1.Length){
+					waypoints[waypointIndex] = new Vector3(Waypoints1[waypointIndex].transform.position[0] + Random.Range(-pathOffset, pathOffset),
+									Waypoints1[waypointIndex].transform.position[1] + Random.Range(-pathOffset, pathOffset),
+									Waypoints1[waypointIndex].transform.position[2]);
 				}
             }
         }

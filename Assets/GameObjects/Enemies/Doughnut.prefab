@@ -80,7 +80,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.82, y: 3.15}
+    oldSize: {x: 1.82, y: 1.87}
     newSize: {x: 2.82, y: 3.15}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -120,24 +120,31 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Speed: 1
   Health: 30
-  Waypoints:
-  - {fileID: 4134246107434190, guid: 7cb7d35c8b84a104e99b072d36023408, type: 2}
-  - {fileID: 4240015483138772, guid: 7cb7d35c8b84a104e99b072d36023408, type: 2}
-  - {fileID: 4621450500678862, guid: 7cb7d35c8b84a104e99b072d36023408, type: 2}
-  - {fileID: 4512457253412118, guid: 7cb7d35c8b84a104e99b072d36023408, type: 2}
-  - {fileID: 4709066132207810, guid: 7cb7d35c8b84a104e99b072d36023408, type: 2}
-  - {fileID: 4586596918666290, guid: 7cb7d35c8b84a104e99b072d36023408, type: 2}
-  - {fileID: 4809644569651560, guid: 7cb7d35c8b84a104e99b072d36023408, type: 2}
-  - {fileID: 4450339623882994, guid: 7cb7d35c8b84a104e99b072d36023408, type: 2}
-  - {fileID: 4524838931292362, guid: 7cb7d35c8b84a104e99b072d36023408, type: 2}
-  - {fileID: 4356860519157626, guid: 7cb7d35c8b84a104e99b072d36023408, type: 2}
-  - {fileID: 4939630995672664, guid: 7cb7d35c8b84a104e99b072d36023408, type: 2}
-  - {fileID: 4125068929878432, guid: 7cb7d35c8b84a104e99b072d36023408, type: 2}
-  - {fileID: 4403510882044140, guid: 7cb7d35c8b84a104e99b072d36023408, type: 2}
-  - {fileID: 4884705660083554, guid: 7cb7d35c8b84a104e99b072d36023408, type: 2}
-  - {fileID: 4558459364959390, guid: 7cb7d35c8b84a104e99b072d36023408, type: 2}
-  - {fileID: 4593587764891714, guid: 7cb7d35c8b84a104e99b072d36023408, type: 2}
-  - {fileID: 4772502359916582, guid: 7cb7d35c8b84a104e99b072d36023408, type: 2}
+  Waypoints4: []
+  Waypoints1:
+  - {fileID: 4553745163085996, guid: 7a05ceb5b2fd89549b596466b6bc346e, type: 2}
+  - {fileID: 4125671885417286, guid: 7a05ceb5b2fd89549b596466b6bc346e, type: 2}
+  - {fileID: 4124347850258242, guid: 7a05ceb5b2fd89549b596466b6bc346e, type: 2}
+  - {fileID: 4837403999796814, guid: 7a05ceb5b2fd89549b596466b6bc346e, type: 2}
+  - {fileID: 4879522455751908, guid: 7a05ceb5b2fd89549b596466b6bc346e, type: 2}
+  - {fileID: 4846071475459352, guid: 7a05ceb5b2fd89549b596466b6bc346e, type: 2}
+  - {fileID: 4457654661130702, guid: 7a05ceb5b2fd89549b596466b6bc346e, type: 2}
+  - {fileID: 4730830967140732, guid: 7a05ceb5b2fd89549b596466b6bc346e, type: 2}
+  - {fileID: 4790493629550086, guid: 7a05ceb5b2fd89549b596466b6bc346e, type: 2}
+  - {fileID: 4794410766379170, guid: 7a05ceb5b2fd89549b596466b6bc346e, type: 2}
+  - {fileID: 4800478966427404, guid: 7a05ceb5b2fd89549b596466b6bc346e, type: 2}
+  - {fileID: 4654213543968976, guid: 7a05ceb5b2fd89549b596466b6bc346e, type: 2}
+  - {fileID: 4363075534861020, guid: 7a05ceb5b2fd89549b596466b6bc346e, type: 2}
+  - {fileID: 4158962604807016, guid: 7a05ceb5b2fd89549b596466b6bc346e, type: 2}
+  - {fileID: 4983536547788008, guid: 7a05ceb5b2fd89549b596466b6bc346e, type: 2}
+  - {fileID: 4598890713933392, guid: 7a05ceb5b2fd89549b596466b6bc346e, type: 2}
+  - {fileID: 4742040510660474, guid: 7a05ceb5b2fd89549b596466b6bc346e, type: 2}
+  - {fileID: 4960569392686532, guid: 7a05ceb5b2fd89549b596466b6bc346e, type: 2}
+  - {fileID: 4694792126914318, guid: 7a05ceb5b2fd89549b596466b6bc346e, type: 2}
+  - {fileID: 4998375435954896, guid: 7a05ceb5b2fd89549b596466b6bc346e, type: 2}
+  - {fileID: 4989001944234522, guid: 7a05ceb5b2fd89549b596466b6bc346e, type: 2}
+  - {fileID: 4099420224665706, guid: 7a05ceb5b2fd89549b596466b6bc346e, type: 2}
+  - {fileID: 4020050493273446, guid: 7a05ceb5b2fd89549b596466b6bc346e, type: 2}
   pathOffset: 0.5
 --- !u!212 &212695117517351940
 SpriteRenderer:
@@ -174,7 +181,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 41708ec6ddfaa1c45b2da2c9ce47a17e, type: 3}
+  m_Sprite: {fileID: 21300016, guid: 41708ec6ddfaa1c45b2da2c9ce47a17e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
