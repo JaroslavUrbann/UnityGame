@@ -1,13 +1,17 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using System.Timers;
 using System.IO;
 
 public class Spawner : MonoBehaviour {
 
 	public Enemy[] Enemy;
+    public Text WaveText;
+    public static bool IsLevelCompleted;
 
+    private float numberOfWaves;
 	private float wavesLeft;
     private float batchesLeft;
 
@@ -31,14 +35,16 @@ public class Spawner : MonoBehaviour {
     {
         roundStarted = true;
         nextBatchStart = Time.time;
+        loadWaves();
+        WaveCounterUI();
     }
 
     void loadWaves(){
         string csvPath = System.IO.Path.GetFullPath("WaveDatabase.csv");
         csvReader = new StreamReader(csvPath);
         wavesList = new Queue<float[]>();
-        wavesLeft = System.Array.ConvertAll<string, float>(csvReader.ReadLine().Split(','), float.Parse)[0];
-        wavesLeft--;
+        numberOfWaves = System.Array.ConvertAll<string, float>(csvReader.ReadLine().Split(','), float.Parse)[0];
+        wavesLeft = numberOfWaves - 1;
         batchesLeft = System.Array.ConvertAll<string, float>(csvReader.ReadLine().Split(','), float.Parse)[0];;
         while(!csvReader.EndOfStream){
             float[] Line = System.Array.ConvertAll<string, float>(csvReader.ReadLine().Split(','), float.Parse);
@@ -48,7 +54,7 @@ public class Spawner : MonoBehaviour {
 	
 	// Use this for initialization
 	void Start () {
-        loadWaves();
+        IsLevelCompleted = false;
         roundStarted = false;
         spawnEnemies = false;
 	}
@@ -64,6 +70,10 @@ public class Spawner : MonoBehaviour {
         }
 	}
 
+    void WaveCounterUI(){
+        WaveText.text = "Wave: " + (numberOfWaves - wavesLeft).ToString() + "/" + numberOfWaves; 
+    }
+
 	void ReadWaves()
     {
         if(!spawnEnemies && Time.time > nextBatchStart){
@@ -72,10 +82,12 @@ public class Spawner : MonoBehaviour {
                 if(wavesLeft == 0){
                     Debug.Log("dude it all ended");
                     roundStarted = false;
+                    IsLevelCompleted = true;
                     return;
                 }
                 batchesLeft = wavesList.Dequeue()[0];
                 wavesLeft--;
+                WaveCounterUI();
             }
             Debug.Log("The batch started");
             float[] batchInfo = wavesList.Dequeue();

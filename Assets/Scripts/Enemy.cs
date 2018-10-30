@@ -52,7 +52,7 @@ public class Enemy : MonoBehaviour {
         }
 		else{
 			Destroy(gameObject);
-			Debug.Log("Remove life here");
+			HealthManager.Health--;
 		}
     }
 }
