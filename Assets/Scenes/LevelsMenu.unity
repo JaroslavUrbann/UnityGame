@@ -966,6 +966,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11591374f3af87841a4418874ae6491e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Levels: []
+  LevelSprites: []
+  StarSprites: []
 --- !u!114 &1847516501
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -977,6 +980,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11591374f3af87841a4418874ae6491e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Levels:
+  - {fileID: 1543926924}
+  - {fileID: 1156197887}
+  - {fileID: 1875221654}
+  - {fileID: 1143553280}
+  LevelSprites:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  StarSprites: []
 --- !u!1 &1875221652
 GameObject:
   m_ObjectHideFlags: 0
