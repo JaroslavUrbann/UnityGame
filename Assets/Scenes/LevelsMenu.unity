@@ -986,11 +986,15 @@ MonoBehaviour:
   - {fileID: 1875221654}
   - {fileID: 1143553280}
   LevelSprites:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  StarSprites: []
+  - {fileID: 21300000, guid: 7cb7616b8ae2fe649a9c5d72724fa79f, type: 3}
+  - {fileID: 21300000, guid: 7cb7616b8ae2fe649a9c5d72724fa79f, type: 3}
+  - {fileID: 21300000, guid: 7cb7616b8ae2fe649a9c5d72724fa79f, type: 3}
+  - {fileID: 21300000, guid: 7cb7616b8ae2fe649a9c5d72724fa79f, type: 3}
+  StarSprites:
+  - {fileID: 21300000, guid: c24397b1b7e824e41b73be50635626f4, type: 3}
+  - {fileID: 21300000, guid: a83fac5e84c7e264eac295fa05ce78ff, type: 3}
+  - {fileID: 21300002, guid: a83fac5e84c7e264eac295fa05ce78ff, type: 3}
+  - {fileID: 21300004, guid: a83fac5e84c7e264eac295fa05ce78ff, type: 3}
 --- !u!1 &1875221652
 GameObject:
   m_ObjectHideFlags: 0

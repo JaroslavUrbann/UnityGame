@@ -9,22 +9,25 @@ using System;
 public class LevelsMenu : MonoBehaviour {
 
 	public Button[] Levels;
-	public Image[] LevelSprites;
-	public Image[] StarSprites;
+	public Sprite[] LevelSprites;
+	public Sprite[] StarSprites;
 
 	void Start(){
-		// works but sprite != image
-/* 		string[] savedValues = File.ReadAllText(Application.dataPath + "/save.txt").Split(',');
-		for(int i = 0; i< 4; i++){
-			int savedValue = Int32.Parse(savedValues[i]);
-			if(savedValue == 0){
-				Levels[i].image = LevelSprites[i];
-			}
-			else{
-				Levels[i].image = StarSprites[savedValue + 1];
-			}
-		} */
-	}
+        // works but sprite != image
+        string[] savedValues = File.ReadAllText(Application.dataPath + "/save.txt").Split(',');
+        for (int i = 0; i < 4; i++)
+        {
+            int savedValue = Int32.Parse(savedValues[i]);
+            if (savedValue == 0)
+            {
+                Levels[i].GetComponent<Image>().sprite = LevelSprites[i];
+            }
+            else
+            {
+                Levels[i].GetComponent<Image>().sprite = StarSprites[savedValue + 1];
+            }
+        }
+    }
 
 	public void LoadScene(string sceneName){
 		SceneManager.LoadScene(sceneName);
