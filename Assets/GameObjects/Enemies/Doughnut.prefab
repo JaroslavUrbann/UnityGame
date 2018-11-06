@@ -120,7 +120,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Speed: 1
   Health: 30
-  Waypoints4: []
   Waypoints1:
   - {fileID: 4553745163085996, guid: 7a05ceb5b2fd89549b596466b6bc346e, type: 2}
   - {fileID: 4125671885417286, guid: 7a05ceb5b2fd89549b596466b6bc346e, type: 2}
@@ -145,6 +144,23 @@ MonoBehaviour:
   - {fileID: 4989001944234522, guid: 7a05ceb5b2fd89549b596466b6bc346e, type: 2}
   - {fileID: 4099420224665706, guid: 7a05ceb5b2fd89549b596466b6bc346e, type: 2}
   - {fileID: 4020050493273446, guid: 7a05ceb5b2fd89549b596466b6bc346e, type: 2}
+  Waypoints2:
+  - {fileID: 4972283331294622, guid: 227a7d46399024c4aabf7b456ecc46d7, type: 2}
+  - {fileID: 4498062535498482, guid: 227a7d46399024c4aabf7b456ecc46d7, type: 2}
+  - {fileID: 4087845463947334, guid: 227a7d46399024c4aabf7b456ecc46d7, type: 2}
+  - {fileID: 4779303720839366, guid: 227a7d46399024c4aabf7b456ecc46d7, type: 2}
+  - {fileID: 4007770453374056, guid: 227a7d46399024c4aabf7b456ecc46d7, type: 2}
+  - {fileID: 4342884296633426, guid: 227a7d46399024c4aabf7b456ecc46d7, type: 2}
+  - {fileID: 4531451103497866, guid: 227a7d46399024c4aabf7b456ecc46d7, type: 2}
+  - {fileID: 4525870321496248, guid: 227a7d46399024c4aabf7b456ecc46d7, type: 2}
+  - {fileID: 4398442862454930, guid: 227a7d46399024c4aabf7b456ecc46d7, type: 2}
+  - {fileID: 4834967647227720, guid: 227a7d46399024c4aabf7b456ecc46d7, type: 2}
+  - {fileID: 4163018613722110, guid: 227a7d46399024c4aabf7b456ecc46d7, type: 2}
+  - {fileID: 4309243236591876, guid: 227a7d46399024c4aabf7b456ecc46d7, type: 2}
+  - {fileID: 4082236507966800, guid: 227a7d46399024c4aabf7b456ecc46d7, type: 2}
+  - {fileID: 4225365103363432, guid: 227a7d46399024c4aabf7b456ecc46d7, type: 2}
+  Waypoints3: []
+  Waypoints4: []
   pathOffset: 0.5
 --- !u!212 &212695117517351940
 SpriteRenderer:

@@ -6,8 +6,10 @@ public class Enemy : MonoBehaviour {
 
 	public float Speed;
 	public float Health;
-    public Transform[] Waypoints4;
 	public Transform[] Waypoints1;
+	public Transform[] Waypoints2;
+	public Transform[] Waypoints3;
+	public Transform[] Waypoints4;
 	public float pathOffset = 0.1f;
 	private float speedOffset = 0.2f;
 	private int waypointIndex = 0;
