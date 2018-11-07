@@ -854,11 +854,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 183551534}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.43, y: -3.86, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.43, y: -3.86, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 361618778}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &193864104
@@ -1126,8 +1126,7 @@ MonoBehaviour:
   - {fileID: 1287301391}
   RangeObject: {fileID: 2139726658}
   TowerRange: {fileID: 194475552}
-  Projectile: {fileID: 114875310477853364, guid: c76ddb20c60ba1843a41d398fda7b44a,
-    type: 2}
+  Projectiles: []
 --- !u!58 &194475552
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1992,7 +1991,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 270032436}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2139604713}
+        m_MethodName: ChooseTower
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Upgrade
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &270032436
@@ -2434,6 +2444,8 @@ Transform:
   - {fileID: 1946780446}
   - {fileID: 80202807}
   - {fileID: 299057355}
+  - {fileID: 183551537}
+  - {fileID: 1352550485}
   m_Father: {fileID: 519420032}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2452,7 +2464,7 @@ GameObject:
   - component: {fileID: 393021387}
   - component: {fileID: 393021386}
   m_Layer: 5
-  m_Name: ArcheryTower
+  m_Name: UnicornTower
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2554,7 +2566,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Archery
+          m_StringArgument: Unicorn
           m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
@@ -3468,8 +3480,7 @@ MonoBehaviour:
   - {fileID: 467780777}
   RangeObject: {fileID: 1129374565}
   TowerRange: {fileID: 489506819}
-  Projectile: {fileID: 114875310477853364, guid: c76ddb20c60ba1843a41d398fda7b44a,
-    type: 2}
+  Projectiles: []
 --- !u!58 &489506819
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -4678,7 +4689,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 807.15015, y: 251}
+  m_AnchoredPosition: {x: 807.15015, y: 262.09998}
   m_SizeDelta: {x: 305.7, y: 110.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &727576323
@@ -6200,8 +6211,7 @@ MonoBehaviour:
   - {fileID: 2040085621}
   RangeObject: {fileID: 1468093830}
   TowerRange: {fileID: 1059034919}
-  Projectile: {fileID: 114875310477853364, guid: c76ddb20c60ba1843a41d398fda7b44a,
-    type: 2}
+  Projectiles: []
 --- !u!58 &1059034919
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -6896,8 +6906,7 @@ MonoBehaviour:
   - {fileID: 1262611607}
   RangeObject: {fileID: 853617300}
   TowerRange: {fileID: 1201244039}
-  Projectile: {fileID: 114875310477853364, guid: c76ddb20c60ba1843a41d398fda7b44a,
-    type: 2}
+  Projectiles: []
 --- !u!58 &1201244039
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -7752,12 +7761,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1352550483}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.82, y: -0.44, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -7.82, y: -0.44, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_Father: {fileID: 361618778}
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1352550486
 SpriteRenderer:
@@ -11526,8 +11535,7 @@ MonoBehaviour:
   - {fileID: 1837082045}
   RangeObject: {fileID: 1581856146}
   TowerRange: {fileID: 1993686551}
-  Projectile: {fileID: 114875310477853364, guid: c76ddb20c60ba1843a41d398fda7b44a,
-    type: 2}
+  Projectiles: []
 --- !u!58 &1993686551
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -11727,7 +11735,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2022836297
 GameObject:
@@ -12248,7 +12256,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2116244959}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2139604713}
+        m_MethodName: ChooseTower
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Sell
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &2116244959
@@ -12321,7 +12340,7 @@ GameObject:
   - component: {fileID: 2119008514}
   - component: {fileID: 2119008513}
   m_Layer: 5
-  m_Name: CanonTower
+  m_Name: OrangeTower
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12423,7 +12442,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Canon
+          m_StringArgument: Orange
           m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
@@ -12649,9 +12668,9 @@ RectTransform:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2139604711}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.00008, y: 1.00008, z: 1.00008}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1568358705}
   - {fileID: 2116244961}
@@ -12681,10 +12700,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TowerSprites:
+  - {fileID: 21300000, guid: 7b15da44400cb754e9e6064aca43e94c, type: 3}
   - {fileID: 21300000, guid: 9de875918c6242646bd2950a5269c4ff, type: 3}
-  - {fileID: 21300000, guid: 9de875918c6242646bd2950a5269c4ff, type: 3}
-  - {fileID: 21300000, guid: 9de875918c6242646bd2950a5269c4ff, type: 3}
+  - {fileID: 21300000, guid: aa7891a194bfacd4883597c5736de076, type: 3}
   - {fileID: 21300000, guid: 11cd806ace060794995ce1641f8fd03f, type: 3}
+  - {fileID: 21300000, guid: ae5383014894c5e44922e9bdd818c2a8, type: 3}
   TowerOptions:
   - {fileID: 2116244957}
   - {fileID: 270032434}
@@ -12695,8 +12715,11 @@ MonoBehaviour:
   - {fileID: 868958272}
   RangeObject: {fileID: 1568358703}
   TowerRange: {fileID: 2139604714}
-  Projectile: {fileID: 114875310477853364, guid: c76ddb20c60ba1843a41d398fda7b44a,
-    type: 2}
+  Projectiles:
+  - {fileID: 114875310477853364, guid: c76ddb20c60ba1843a41d398fda7b44a, type: 2}
+  - {fileID: 114875310477853364, guid: f1492170c2ea17f45adfcc15d95a402a, type: 2}
+  - {fileID: 114875310477853364, guid: 8aa5b56a1097de14f95ef95e68709eb1, type: 2}
+  - {fileID: 114875310477853364, guid: b31f198954ce0814b8bc17f9b826972e, type: 2}
 --- !u!58 &2139604714
 CircleCollider2D:
   m_ObjectHideFlags: 0

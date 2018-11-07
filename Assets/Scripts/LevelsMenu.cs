@@ -8,7 +8,7 @@ using System;
 
 public class LevelsMenu : MonoBehaviour {
 
-	public Button[] Levels;
+	public Image[] Levels;
 	public Sprite[] LevelSprites;
 	public Sprite[] StarSprites;
 
@@ -24,6 +24,7 @@ public class LevelsMenu : MonoBehaviour {
             }
             else
             {
+                Debug.Log(savedValue + 1);
                 Levels[i].GetComponent<Image>().sprite = StarSprites[savedValue + 1];
             }
         }

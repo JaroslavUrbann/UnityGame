@@ -10,7 +10,8 @@ public class TowerMenus : MonoBehaviour {
 	public GameObject[] BuildOptions;
 	public GameObject RangeObject;
 	public CircleCollider2D TowerRange;
-	public Projectile Projectile;
+	public Projectile[] Projectiles;
+	private int towerIndex;
 	private Queue<GameObject> targets = new Queue<GameObject>();
 	private GameObject target;
 	private bool isBuilt = false;
@@ -51,12 +52,32 @@ public class TowerMenus : MonoBehaviour {
 	}
 
 	private void Shoot(){
-		if(target != null && Time.time > nextFire && isBuilt){
-			Projectile ProjectileInstance = Instantiate (Projectile, transform.position, Quaternion.identity) as Projectile;
-			ProjectileInstance.MoveSpeed = projectileSpeed;
-			ProjectileInstance.Target = target;
-			ProjectileInstance.Damage = projectileDamage;
-			nextFire = Time.time + projectileFireRate;
+		if(target != null && isBuilt){
+			// rotates tower
+			Vector2 direction = target.transform.position - transform.position;
+			float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+			Quaternion rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+			transform.rotation = Quaternion.Slerp(transform.rotation, rotation, 5f * Time.deltaTime);
+
+			if(Time.time > nextFire){
+				if(towerIndex == 3){
+					for(int i=0;i<3;i++){
+						Projectile ProjectileInstance = Instantiate (Projectiles[towerIndex], transform.position, Quaternion.identity) as Projectile;
+						ProjectileInstance.MoveSpeed = projectileSpeed;
+						ProjectileInstance.Target = target;
+						ProjectileInstance.Damage = projectileDamage;
+						ProjectileInstance.aimOffset = 2f;
+						nextFire = Time.time + projectileFireRate;
+					}
+				}
+				else{
+					Projectile ProjectileInstance = Instantiate (Projectiles[towerIndex], transform.position, Quaternion.identity) as Projectile;
+					ProjectileInstance.MoveSpeed = projectileSpeed;
+					ProjectileInstance.Target = target;
+					ProjectileInstance.Damage = projectileDamage;
+					nextFire = Time.time + projectileFireRate;
+				}
+			}
 		}
 		if (target == null && targets.Count > 0 && isBuilt){
 			target = targets.Dequeue();
@@ -70,31 +91,42 @@ public class TowerMenus : MonoBehaviour {
 		isBuilt = true;
         switch (towerName)
         {
-            case "Archery":
+            case "Unicorn":
                 projectileFireRate = 0.5f;
                 projectileSpeed = 20f;
                 projectileDamage = 10f;
-                gameObject.GetComponent<Image>().sprite = TowerSprites[0];
+				towerIndex = 0;
                 break;
-            case "Canon":
+            case "Orange":
                 projectileFireRate = 0.5f;
                 projectileSpeed = 20f;
                 projectileDamage = 10f;
-                gameObject.GetComponent<Image>().sprite = TowerSprites[1];
+				towerIndex = 1;
                 break;
             case "Wizard":
                 projectileFireRate = 0.5f;
                 projectileSpeed = 20f;
                 projectileDamage = 10f;
-                gameObject.GetComponent<Image>().sprite = TowerSprites[2];
+				towerIndex = 2;
                 break;
             case "Trebuchet":
-                projectileFireRate = 0.5f;
-                projectileSpeed = 20f;
+                projectileFireRate = 2f;
+                projectileSpeed = 7f;
                 projectileDamage = 10f;
-                gameObject.GetComponent<Image>().sprite = TowerSprites[3];
+				towerIndex = 3;
                 break;
+			case "Sell":
+				isBuilt = false;
+				towerIndex = 4;
+				break;
+			case "Upgrade":
+				projectileFireRate -= 0.2f;
+                projectileSpeed += 5f;
+                projectileDamage += 5f;
+				TowerRange.radius += 50;
+				break;
         }
+		gameObject.GetComponent<Image>().sprite = TowerSprites[towerIndex];
 	}
 
 	public void OnMouseEnter() { 
