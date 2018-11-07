@@ -1,9 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class TowerMenus : MonoBehaviour {
 
+    public Sprite[] TowerSprites;
 	public GameObject[] TowerOptions;
 	public GameObject[] BuildOptions;
 	public GameObject RangeObject;
@@ -72,21 +74,25 @@ public class TowerMenus : MonoBehaviour {
                 projectileFireRate = 0.5f;
                 projectileSpeed = 20f;
                 projectileDamage = 10f;
+                gameObject.GetComponent<Image>().sprite = TowerSprites[0];
                 break;
             case "Canon":
                 projectileFireRate = 0.5f;
                 projectileSpeed = 20f;
                 projectileDamage = 10f;
-                break;
-            case "Trebuchet":
-                projectileFireRate = 0.5f;
-                projectileSpeed = 20f;
-                projectileDamage = 10f;
+                gameObject.GetComponent<Image>().sprite = TowerSprites[1];
                 break;
             case "Wizard":
                 projectileFireRate = 0.5f;
                 projectileSpeed = 20f;
                 projectileDamage = 10f;
+                gameObject.GetComponent<Image>().sprite = TowerSprites[2];
+                break;
+            case "Trebuchet":
+                projectileFireRate = 0.5f;
+                projectileSpeed = 20f;
+                projectileDamage = 10f;
+                gameObject.GetComponent<Image>().sprite = TowerSprites[3];
                 break;
         }
 	}

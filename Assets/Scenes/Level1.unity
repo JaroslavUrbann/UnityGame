@@ -1114,6 +1114,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c50257e7671ea03458dffec69da57d90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TowerSprites: []
   TowerOptions:
   - {fileID: 28311828}
   - {fileID: 440748373}
@@ -3455,6 +3456,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c50257e7671ea03458dffec69da57d90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TowerSprites: []
   TowerOptions:
   - {fileID: 296296514}
   - {fileID: 312460755}
@@ -6186,6 +6188,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c50257e7671ea03458dffec69da57d90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TowerSprites: []
   TowerOptions:
   - {fileID: 656981422}
   - {fileID: 1412310071}
@@ -6881,6 +6884,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c50257e7671ea03458dffec69da57d90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TowerSprites: []
   TowerOptions:
   - {fileID: 955388539}
   - {fileID: 1108080883}
@@ -11510,6 +11514,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c50257e7671ea03458dffec69da57d90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TowerSprites: []
   TowerOptions:
   - {fileID: 1086317291}
   - {fileID: 787759268}
@@ -12675,6 +12680,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c50257e7671ea03458dffec69da57d90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TowerSprites:
+  - {fileID: 21300000, guid: 9de875918c6242646bd2950a5269c4ff, type: 3}
+  - {fileID: 21300000, guid: 9de875918c6242646bd2950a5269c4ff, type: 3}
+  - {fileID: 21300000, guid: 9de875918c6242646bd2950a5269c4ff, type: 3}
+  - {fileID: 21300000, guid: 11cd806ace060794995ce1641f8fd03f, type: 3}
   TowerOptions:
   - {fileID: 2116244957}
   - {fileID: 270032434}
