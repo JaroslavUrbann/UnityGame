@@ -211,7 +211,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 64424931f2c044245b3ea66f97222d10, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ee9c56c4ec83df64caa8df2a30b205dc, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -403,7 +403,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 64424931f2c044245b3ea66f97222d10, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ee9c56c4ec83df64caa8df2a30b205dc, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -718,7 +718,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Level1
+          m_StringArgument: Level3
           m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
@@ -742,7 +742,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 7cb7616b8ae2fe649a9c5d72724fa79f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6a57d6b6be1c2ad448017fcff4c07d15, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -853,7 +853,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 64424931f2c044245b3ea66f97222d10, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ee9c56c4ec83df64caa8df2a30b205dc, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1171,7 +1171,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Level1
+          m_StringArgument: Level2
           m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
@@ -1195,7 +1195,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 7cb7616b8ae2fe649a9c5d72724fa79f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6f86579ccfc6559419e17092447b52a7, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1322,7 +1322,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Levels: []
-  LevelSprites: []
+  LevelButtons: []
   StarSprites: []
 --- !u!114 &1847516501
 MonoBehaviour:
@@ -1340,13 +1340,14 @@ MonoBehaviour:
   - {fileID: 1259243043}
   - {fileID: 603400661}
   - {fileID: 140532094}
-  LevelSprites:
-  - {fileID: 21300000, guid: 7cb7616b8ae2fe649a9c5d72724fa79f, type: 3}
-  - {fileID: 21300000, guid: 7cb7616b8ae2fe649a9c5d72724fa79f, type: 3}
-  - {fileID: 21300000, guid: 7cb7616b8ae2fe649a9c5d72724fa79f, type: 3}
-  - {fileID: 21300000, guid: 7cb7616b8ae2fe649a9c5d72724fa79f, type: 3}
+  LevelButtons:
+  - {fileID: 1543926924}
+  - {fileID: 1761220615}
+  - {fileID: 1093637325}
+  - {fileID: 483909656}
   StarSprites:
   - {fileID: 21300000, guid: 64424931f2c044245b3ea66f97222d10, type: 3}
+  - {fileID: 21300000, guid: ee9c56c4ec83df64caa8df2a30b205dc, type: 3}
   - {fileID: 21300000, guid: 3d7848f2055f03b45a05fa3eebb2e7ed, type: 3}
   - {fileID: 21300000, guid: 5a9b6dce38d1abe48937cf8d2d198109, type: 3}
   - {fileID: 21300000, guid: 32899f5675fa0bc4b9b357186081e73e, type: 3}
@@ -1386,7 +1387,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 64424931f2c044245b3ea66f97222d10, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ee9c56c4ec83df64caa8df2a30b205dc, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

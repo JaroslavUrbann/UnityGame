@@ -16,7 +16,7 @@ public class LevelCompletedMenu : MonoBehaviour {
 	void Update () {
 		if (Spawner.IsLevelCompleted && GameObject.FindWithTag("Enemy") == null){
 			// switch for how many stars he'll get, display them and write it to file, can't do it any better
-
+			int levelIndex = SceneManager.GetActiveScene().buildIndex;
 			int stars = 3;
 
 			if(HealthManager.Health  < 3){
@@ -29,11 +29,15 @@ public class LevelCompletedMenu : MonoBehaviour {
 			LevelCompletedUI.SetActive(true);
 
 			string[] savedValues = File.ReadAllText(Application.dataPath + "/save.txt").Split(',');
-			int savedSceneValue = Int32.Parse(savedValues[SceneManager.GetActiveScene().buildIndex]);
+			int savedSceneValue = Int32.Parse(savedValues[levelIndex]);
+			int nextSceneValue = Int32.Parse(savedValues[levelIndex + 1]);
 			if(savedSceneValue < stars){
-				savedValues[SceneManager.GetActiveScene().buildIndex] = stars.ToString();
-				File.WriteAllText(Application.dataPath + "/save.txt", string.Join(",", savedValues));
+				savedValues[levelIndex] = stars.ToString();
 			}
+			if(levelIndex + 1 < 4 && nextSceneValue == -1){
+				savedValues[levelIndex + 1] = "0";
+			}
+			File.WriteAllText(Application.dataPath + "/save.txt", string.Join(",", savedValues));
 		}
 	}
 

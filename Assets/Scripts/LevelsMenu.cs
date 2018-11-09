@@ -9,7 +9,7 @@ using System;
 public class LevelsMenu : MonoBehaviour {
 
 	public Image[] Levels;
-	public Sprite[] LevelSprites;
+    public Button[] LevelButtons;
 	public Sprite[] StarSprites;
 
 	void Start(){
@@ -18,14 +18,9 @@ public class LevelsMenu : MonoBehaviour {
         for (int i = 0; i < 4; i++)
         {
             int savedValue = Int32.Parse(savedValues[i]);
-            if (savedValue == 0)
-            {
-                Levels[i].GetComponent<Image>().sprite = LevelSprites[i];
-            }
-            else
-            {
-                Debug.Log(savedValue + 1);
-                Levels[i].GetComponent<Image>().sprite = StarSprites[savedValue + 1];
+            Levels[i].GetComponent<Image>().sprite = StarSprites[savedValue + 1];
+            if(savedValue == -1){
+                LevelButtons[i].interactable = false;
             }
         }
     }

@@ -14,7 +14,6 @@ public class Projectile : MonoBehaviour {
 	void Start () {
 		rb = GetComponent<Rigidbody2D> ();
 		Vector3 pos = new Vector3(transform.position[0] + Random.Range(-aimOffset, aimOffset), transform.position[1] + Random.Range(-aimOffset, aimOffset), transform.position[2]);
-		Debug.Log(transform.position);
 		moveDirection = (Target.transform.position - pos).normalized * MoveSpeed;
 		rb.velocity = new Vector2 (moveDirection.x, moveDirection.y);
 

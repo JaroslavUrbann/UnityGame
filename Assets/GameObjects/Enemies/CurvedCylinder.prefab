@@ -159,7 +159,40 @@ MonoBehaviour:
   - {fileID: 4309243236591876, guid: 227a7d46399024c4aabf7b456ecc46d7, type: 2}
   - {fileID: 4082236507966800, guid: 227a7d46399024c4aabf7b456ecc46d7, type: 2}
   - {fileID: 4225365103363432, guid: 227a7d46399024c4aabf7b456ecc46d7, type: 2}
-  Waypoints3: []
+  Waypoints3:
+  - {fileID: 4229575701026224, guid: 49f31b65ebd5ab64ba9c463d6a567b66, type: 2}
+  - {fileID: 4046719368742272, guid: 49f31b65ebd5ab64ba9c463d6a567b66, type: 2}
+  - {fileID: 4462944654889228, guid: 49f31b65ebd5ab64ba9c463d6a567b66, type: 2}
+  - {fileID: 4064837896154188, guid: 49f31b65ebd5ab64ba9c463d6a567b66, type: 2}
+  - {fileID: 4478293644992360, guid: 49f31b65ebd5ab64ba9c463d6a567b66, type: 2}
+  - {fileID: 4816032453236568, guid: 49f31b65ebd5ab64ba9c463d6a567b66, type: 2}
+  - {fileID: 4546173677100904, guid: 49f31b65ebd5ab64ba9c463d6a567b66, type: 2}
+  - {fileID: 4950288589282198, guid: 49f31b65ebd5ab64ba9c463d6a567b66, type: 2}
+  - {fileID: 4485686357014256, guid: 49f31b65ebd5ab64ba9c463d6a567b66, type: 2}
+  - {fileID: 4985056347003916, guid: 49f31b65ebd5ab64ba9c463d6a567b66, type: 2}
+  - {fileID: 4610448438248716, guid: 49f31b65ebd5ab64ba9c463d6a567b66, type: 2}
+  - {fileID: 4601876155482628, guid: 49f31b65ebd5ab64ba9c463d6a567b66, type: 2}
+  - {fileID: 4419138104671102, guid: 49f31b65ebd5ab64ba9c463d6a567b66, type: 2}
+  - {fileID: 4768056697668146, guid: 49f31b65ebd5ab64ba9c463d6a567b66, type: 2}
+  - {fileID: 4850831403895908, guid: 49f31b65ebd5ab64ba9c463d6a567b66, type: 2}
+  - {fileID: 4985393935127362, guid: 49f31b65ebd5ab64ba9c463d6a567b66, type: 2}
+  - {fileID: 4180823559317956, guid: 49f31b65ebd5ab64ba9c463d6a567b66, type: 2}
+  - {fileID: 4443356942309114, guid: 49f31b65ebd5ab64ba9c463d6a567b66, type: 2}
+  - {fileID: 4724565872466206, guid: 49f31b65ebd5ab64ba9c463d6a567b66, type: 2}
+  - {fileID: 4295449193184440, guid: 49f31b65ebd5ab64ba9c463d6a567b66, type: 2}
+  - {fileID: 4686227327006950, guid: 49f31b65ebd5ab64ba9c463d6a567b66, type: 2}
+  - {fileID: 4506798239732952, guid: 49f31b65ebd5ab64ba9c463d6a567b66, type: 2}
+  - {fileID: 4255068952240464, guid: 49f31b65ebd5ab64ba9c463d6a567b66, type: 2}
+  - {fileID: 4138905544288726, guid: 49f31b65ebd5ab64ba9c463d6a567b66, type: 2}
+  - {fileID: 4345888126717412, guid: 49f31b65ebd5ab64ba9c463d6a567b66, type: 2}
+  - {fileID: 4157399074190998, guid: 49f31b65ebd5ab64ba9c463d6a567b66, type: 2}
+  - {fileID: 4614622874588908, guid: 49f31b65ebd5ab64ba9c463d6a567b66, type: 2}
+  - {fileID: 4048029893277788, guid: 49f31b65ebd5ab64ba9c463d6a567b66, type: 2}
+  - {fileID: 4441541745755430, guid: 49f31b65ebd5ab64ba9c463d6a567b66, type: 2}
+  - {fileID: 4818313597553138, guid: 49f31b65ebd5ab64ba9c463d6a567b66, type: 2}
+  - {fileID: 4021036461116182, guid: 49f31b65ebd5ab64ba9c463d6a567b66, type: 2}
+  - {fileID: 4396439953391490, guid: 49f31b65ebd5ab64ba9c463d6a567b66, type: 2}
+  - {fileID: 4816574875344064, guid: 49f31b65ebd5ab64ba9c463d6a567b66, type: 2}
   Waypoints4: []
   pathOffset: 0.5
 --- !u!212 &212133434795283674

@@ -11,7 +11,7 @@ public class HealthManager : MonoBehaviour {
 	public static int Health;
 
 	void Start(){
-		Health = 1;
+		Health = 5;
 		LevelFailedUI.SetActive(false);
 	}
 
