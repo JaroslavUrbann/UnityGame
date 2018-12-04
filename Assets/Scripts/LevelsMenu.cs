@@ -15,7 +15,7 @@ public class LevelsMenu : MonoBehaviour {
 	void Start(){
         // works but sprite != image
         string[] savedValues = File.ReadAllText(Application.dataPath + "/save.txt").Split(',');
-        for (int i = 0; i < 4; i++)
+        for (int i = 0; i < Levels.Length; i++)
         {
             int savedValue = Int32.Parse(savedValues[i]);
             Levels[i].GetComponent<Image>().sprite = StarSprites[savedValue + 1];

@@ -193,7 +193,30 @@ MonoBehaviour:
   - {fileID: 4021036461116182, guid: 49f31b65ebd5ab64ba9c463d6a567b66, type: 2}
   - {fileID: 4396439953391490, guid: 49f31b65ebd5ab64ba9c463d6a567b66, type: 2}
   - {fileID: 4816574875344064, guid: 49f31b65ebd5ab64ba9c463d6a567b66, type: 2}
-  Waypoints4: []
+  Waypoints4:
+  - {fileID: 4615811493943748, guid: 6e4d308ed215a9e4ca96574aef7d28c0, type: 2}
+  - {fileID: 4612335049827778, guid: 6e4d308ed215a9e4ca96574aef7d28c0, type: 2}
+  - {fileID: 4124628900877444, guid: 6e4d308ed215a9e4ca96574aef7d28c0, type: 2}
+  - {fileID: 4550992565558182, guid: 6e4d308ed215a9e4ca96574aef7d28c0, type: 2}
+  - {fileID: 4842045214110716, guid: 6e4d308ed215a9e4ca96574aef7d28c0, type: 2}
+  - {fileID: 4122666179223132, guid: 6e4d308ed215a9e4ca96574aef7d28c0, type: 2}
+  - {fileID: 4722198125012322, guid: 6e4d308ed215a9e4ca96574aef7d28c0, type: 2}
+  - {fileID: 4008021258068858, guid: 6e4d308ed215a9e4ca96574aef7d28c0, type: 2}
+  - {fileID: 4478023233076060, guid: 6e4d308ed215a9e4ca96574aef7d28c0, type: 2}
+  - {fileID: 4137738313700644, guid: 6e4d308ed215a9e4ca96574aef7d28c0, type: 2}
+  - {fileID: 4866898971810812, guid: 6e4d308ed215a9e4ca96574aef7d28c0, type: 2}
+  - {fileID: 4305014457664492, guid: 6e4d308ed215a9e4ca96574aef7d28c0, type: 2}
+  - {fileID: 4526355058471280, guid: 6e4d308ed215a9e4ca96574aef7d28c0, type: 2}
+  - {fileID: 4843239020435764, guid: 6e4d308ed215a9e4ca96574aef7d28c0, type: 2}
+  - {fileID: 4122545788629258, guid: 6e4d308ed215a9e4ca96574aef7d28c0, type: 2}
+  - {fileID: 4019725742343210, guid: 6e4d308ed215a9e4ca96574aef7d28c0, type: 2}
+  - {fileID: 4004444070297250, guid: 6e4d308ed215a9e4ca96574aef7d28c0, type: 2}
+  - {fileID: 4733951066078554, guid: 6e4d308ed215a9e4ca96574aef7d28c0, type: 2}
+  - {fileID: 4594456403526984, guid: 6e4d308ed215a9e4ca96574aef7d28c0, type: 2}
+  - {fileID: 4656369295006406, guid: 6e4d308ed215a9e4ca96574aef7d28c0, type: 2}
+  - {fileID: 4331315750523388, guid: 6e4d308ed215a9e4ca96574aef7d28c0, type: 2}
+  - {fileID: 4953561610748684, guid: 6e4d308ed215a9e4ca96574aef7d28c0, type: 2}
+  - {fileID: 4690309063855790, guid: 6e4d308ed215a9e4ca96574aef7d28c0, type: 2}
   pathOffset: 0.5
 --- !u!212 &212724812717346678
 SpriteRenderer:

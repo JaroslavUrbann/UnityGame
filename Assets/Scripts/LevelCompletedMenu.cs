@@ -16,7 +16,8 @@ public class LevelCompletedMenu : MonoBehaviour {
 	void Update () {
 		if (Spawner.IsLevelCompleted && GameObject.FindWithTag("Enemy") == null){
 			// switch for how many stars he'll get, display them and write it to file, can't do it any better
-			int levelIndex = SceneManager.GetActiveScene().buildIndex;
+			int levelIndex = SceneManager.GetActiveScene().buildIndex - 1;
+			Debug.Log(levelIndex);
 			int stars = 3;
 
 			if(HealthManager.Health  < 3){
