@@ -22,8 +22,8 @@ GameObject:
   - component: {fileID: 114897932639696700}
   - component: {fileID: 50270099521642754}
   - component: {fileID: 61337771306029144}
-  - component: {fileID: 95675469521518654}
   - component: {fileID: 212695117517351940}
+  - component: {fileID: 95675469521518654}
   m_Layer: 0
   m_Name: Doughnut
   m_TagString: Enemy

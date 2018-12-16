@@ -21,7 +21,7 @@ public class TowerMenus : MonoBehaviour {
 	private float projectileDamage;
 	private float projectileFireRate;
 	private bool multipleProjectiles;
-	private int moneySpent;
+	private float price;
 	private float nextFire;
 
 	public void ToggleMenu(){
@@ -85,48 +85,61 @@ public class TowerMenus : MonoBehaviour {
 	}
 
 	public void ChooseTower(string towerName){
+        switch (towerName)
+        {
+            case "Unicorn":
+				price = 100;
+                projectileFireRate = 0.5f;
+                projectileSpeed = 12f;
+                projectileDamage = 16f;
+				towerIndex = 0;
+                break;
+            case "Orange":
+				price = 90;
+                projectileFireRate = 2f;
+                projectileSpeed = 16f;
+                projectileDamage = 50f;
+				towerIndex = 1;
+                break;
+            case "Wizard":
+				price = 120;
+                projectileFireRate = 0.2f;
+                projectileSpeed = 40f;
+                projectileDamage = 3f;
+				towerIndex = 2;
+                break;
+            case "Trebuchet":
+				price = 150;
+                projectileFireRate = 4f;
+                projectileSpeed = 7f;
+                projectileDamage = 70f;
+				towerIndex = 3;
+                break;
+			case "Sell":
+				Money.Amount += price / 2;
+				gameObject.GetComponent<Image>().sprite = TowerSprites[4];
+				ToggleMenu();
+				isBuilt = false;
+				return;
+			case "Upgrade":
+				if(!Money.Buy(20))
+					return;
+				price += 20;
+				projectileFireRate = projectileFireRate * 0.9f;
+                projectileSpeed = projectileSpeed  * 1.1f;
+                projectileDamage = projectileDamage * 1.1f;
+				TowerRange.radius = TowerRange.radius * 1.1f;
+				ToggleMenu();
+				return;
+        }
+		if(!Money.Buy(price))
+			return;
+		Debug.Log("got here");
+		gameObject.GetComponent<Image>().sprite = TowerSprites[towerIndex];
 		ToggleMenu();
 		TowerRange.radius = RangeObject.transform.localScale[0] / 2;
 		RangeObject.SetActive(false);
 		isBuilt = true;
-        switch (towerName)
-        {
-            case "Unicorn":
-                projectileFireRate = 0.5f;
-                projectileSpeed = 20f;
-                projectileDamage = 10f;
-				towerIndex = 0;
-                break;
-            case "Orange":
-                projectileFireRate = 0.5f;
-                projectileSpeed = 20f;
-                projectileDamage = 10f;
-				towerIndex = 1;
-                break;
-            case "Wizard":
-                projectileFireRate = 0.5f;
-                projectileSpeed = 20f;
-                projectileDamage = 10f;
-				towerIndex = 2;
-                break;
-            case "Trebuchet":
-                projectileFireRate = 2f;
-                projectileSpeed = 7f;
-                projectileDamage = 10f;
-				towerIndex = 3;
-                break;
-			case "Sell":
-				isBuilt = false;
-				towerIndex = 4;
-				break;
-			case "Upgrade":
-				projectileFireRate -= 0.2f;
-                projectileSpeed += 5f;
-                projectileDamage += 5f;
-				TowerRange.radius += 50;
-				break;
-        }
-		gameObject.GetComponent<Image>().sprite = TowerSprites[towerIndex];
 	}
 
 	public void OnMouseEnter() { 

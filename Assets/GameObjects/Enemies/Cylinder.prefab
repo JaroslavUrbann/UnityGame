@@ -98,7 +98,7 @@ Animator:
   m_GameObject: {fileID: 1291056509873276}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: f30649fe0ad882242922516abaf4f37a, type: 2}
+  m_Controller: {fileID: 9100000, guid: 60f56128449e3b04cbf5d78b095acc83, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -118,8 +118,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f3f5f94b26759b429d0906257a7ac90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 1
-  Health: 30
+  Speed: 0.8
+  Health: 70
   Waypoints1:
   - {fileID: 4553745163085996, guid: 7a05ceb5b2fd89549b596466b6bc346e, type: 2}
   - {fileID: 4125671885417286, guid: 7a05ceb5b2fd89549b596466b6bc346e, type: 2}
@@ -217,7 +217,7 @@ MonoBehaviour:
   - {fileID: 4331315750523388, guid: 6e4d308ed215a9e4ca96574aef7d28c0, type: 2}
   - {fileID: 4953561610748684, guid: 6e4d308ed215a9e4ca96574aef7d28c0, type: 2}
   - {fileID: 4690309063855790, guid: 6e4d308ed215a9e4ca96574aef7d28c0, type: 2}
-  pathOffset: 0.5
+  pathOffset: 0.2
 --- !u!212 &212239516686522648
 SpriteRenderer:
   m_ObjectHideFlags: 1

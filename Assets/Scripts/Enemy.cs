@@ -11,7 +11,7 @@ public class Enemy : MonoBehaviour {
 	public Transform[] Waypoints2;
 	public Transform[] Waypoints3;
 	public Transform[] Waypoints4;
-	public float pathOffset = 0.1f;
+	public float pathOffset = 0.08f;
 	private float speedOffset = 0.2f;
 	private int waypointIndex = 0;
 	private Vector3[] waypoints;
@@ -20,7 +20,6 @@ public class Enemy : MonoBehaviour {
 
 	void Start () {
 		sceneIndex = SceneManager.GetActiveScene().buildIndex - 1;
-		Debug.Log(sceneIndex);
 		allWaypoints = new Transform[][] {Waypoints1, Waypoints2, Waypoints3, Waypoints4}; 
 
 		waypoints = new Vector3[allWaypoints[sceneIndex].Length];
@@ -38,6 +37,7 @@ public class Enemy : MonoBehaviour {
 
 	private void CheckHealth(){
 		if(Health <= 0){
+			Money.Amount += 5;
 			Destroy(gameObject);
 		}
 	}

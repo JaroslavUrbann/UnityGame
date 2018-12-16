@@ -96,6 +96,8 @@ public class Spawner : MonoBehaviour {
             spawnRate = batchLength / batchInfo[2]; // number of enemies sets spawnrate
             enemyHealthMultiplier = batchInfo[3];  // enemy health multiplier
             enemyType = (int)batchInfo[4];   // enemy type index
+            Debug.Log(enemyType);
+            Debug.Log(Enemy[enemyType]);
             batchesLeft--;
         }        
     }
