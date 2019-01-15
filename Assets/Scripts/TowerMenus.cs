@@ -122,9 +122,9 @@ public class TowerMenus : MonoBehaviour {
 				isBuilt = false;
 				return;
 			case "Upgrade":
-				if(!Money.Buy(20))
+				if(!Money.Buy(price * 0.2f))
 					return;
-				price += 20;
+				price *= 1.2f;
 				projectileFireRate = projectileFireRate * 0.9f;
                 projectileSpeed = projectileSpeed  * 1.1f;
                 projectileDamage = projectileDamage * 1.1f;
