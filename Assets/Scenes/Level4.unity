@@ -8612,7 +8612,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5776eb6c20adfa84e9ce4813cd39204e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  StartMoney: 1000
+  StartMoney: 500
   MoneyText: {fileID: 2001171579}
 --- !u!222 &2001171581
 CanvasRenderer:
