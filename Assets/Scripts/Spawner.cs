@@ -40,7 +40,7 @@ public class Spawner : MonoBehaviour {
     }
 
     void loadWaves(){
-        string csvPath = System.IO.Path.GetFullPath("WaveDatabase.csv");
+        string csvPath = System.IO.Path.GetFullPath("ShapeDefense_Data/WaveDatabase.csv");
         csvReader = new StreamReader(csvPath);
         wavesList = new Queue<float[]>();
         numberOfWaves = System.Array.ConvertAll<string, float>(csvReader.ReadLine().Split(','), float.Parse)[0];
